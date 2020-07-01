@@ -1,0 +1,27 @@
+.header {
+  margin-top: 50px;
+}
+.container-header {
+  background-color: transparent;
+  border: 2px solid hsl(217, 16%, 45%);
+  border-radius: 15px;
+  padding: 20px 30px;
+  margin: 20px 350px 10px;
+}
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding-top: 10px;
+}

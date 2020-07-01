@@ -1,0 +1,47 @@
+.containter {
+  margin: 150px 25%;
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
+
+.player-title {
+  letter-spacing: 0.1em;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.column {
+  display: inline-block;
+  margin: 0px 3%;
+}
+
+#col-comp,
+#col-player {
+  pointer-events: none;
+}
+
+.again {
+}
+
+.again h1 {
+  font-size: 36pt;
+  text-align: center;
+}
+
+.again-button {
+  background-color: #fff;
+  font-size: 10pt;
+  letter-spacing: 0.1em;
+  font-weight: lighter;
+  border-radius: 0.4rem;
+  color: hsl(229, 25%, 31%);
+  padding: 10px 50px;
+  margin-top: 10px;
+}
+
+.again-button:hover {
+  color: hsl(349, 71%, 52%);
+}

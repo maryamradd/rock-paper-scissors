@@ -1,0 +1,83 @@
+:root {
+  --main-bg: linear-gradient(-90deg, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  --red-gradiant: linear-gradient(hsl(349, 70%, 56%), hsl(349, 71%, 52%));
+  --yellow-gradiant: linear-gradient(hsl(40, 84%, 53%), hsl(39, 89%, 49%));
+  --blue-gradiant: linear-gradient(hsl(230, 89%, 65%), hsl(230, 89%, 62%));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: 0;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+body,
+input,
+button {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background: var(--main-bg);
+  color: #fff;
+}
+
+.rules-button {
+  background-color: transparent;
+  border: 2px solid hsl(232, 15%, 58%);
+  color: #fff;
+  border-radius: 10px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 12pt;
+  letter-spacing: 0.15em;
+  padding: 10px 40px;
+  position: fixed;
+  right: 60px;
+  bottom: 60px;
+}
+
+.rules-button:hover {
+  border-color: #fff;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 5px;
+  width: 100%;
+  color: hsl(217, 16%, 45%);
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+.footer a,
+a:visited,
+a:link {
+  color: hsl(217, 17%, 63%);
+
+  text-decoration: none;
+}

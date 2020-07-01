@@ -1,0 +1,35 @@
+.container {
+  background-color: #fff;
+  width: 445px;
+  height: 440px;
+  border-radius: 10px;
+  margin-left: 400px;
+}
+
+.top:before,
+.top:after {
+  content: "";
+  display: table;
+}
+.top:after {
+  clear: both;
+}
+.top {
+  clear: both;
+}
+
+.close_icon {
+  float: right;
+  margin: 40px 40px 10px;
+}
+
+.top h1 {
+  float: left;
+  color: hsl(229, 25%, 31%);
+  font-size: 24pt;
+  margin: 30px 40px 10px;
+}
+
+.rules-image {
+  margin: 10% 15%;
+}
