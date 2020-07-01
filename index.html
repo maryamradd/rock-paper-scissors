@@ -11,29 +11,53 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
-    <script src="main.js"></script>
+
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
-
-    Score Rules You Picked The House Picked You Win You Lose Play Again
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    <div class="attribution">
+    <div id="header">
+      <div id="container-header" class="group">
+        <img id="logo" src="/images/logo.svg" alt="logo" />
+        <div id="score-container">
+          <h4>SCORE</h4>
+          <h1 id="score">15</h1>
+        </div>
+      </div>
+    </div>
+    <div id="main-content">
+      <div id="triangle-container">
+        <img id="trinagle" src="/images/bg-triangle.svg" alt="trinagle" />
+        <div id="paper" class="button-circle paper-button">
+          <div class="button-inside">
+            <img src="/images/icon-paper.svg" alt="paper" />
+          </div>
+        </div>
+        <div id="rock" class="button-circle rock-button">
+          <div class="button-inside">
+            <img src="/images/icon-rock.svg" alt="paper" />
+          </div>
+        </div>
+        <div id="scissors" class="button-circle scissors-button">
+          <div class="button-inside">
+            <img src="/images/icon-scissors.svg" alt="paper" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div><button id="rules-button">RULES</button></div>
+  </body>
+  <footer>
+    <div>
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">@maryamradd</a>.
     </div>
-  </body>
+  </footer>
+  <script src="main.js"></script>
 </html>
