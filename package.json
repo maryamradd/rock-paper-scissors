@@ -36,5 +36,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-typescript-prettier": "^4.1.0",
+    "prettier": "^2.2.1"
   }
 }
