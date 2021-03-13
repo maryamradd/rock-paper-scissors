@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/rules-card.css";
+import "../styles/rules-card.scss";
 import closeIcon from "../images/icon-close.svg";
 import rules from "../images/image-rules.svg";
 export default function RulesCard() {

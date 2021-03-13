@@ -1,12 +1,14 @@
-import React from "react";
-import "../styles/global.css";
-import Choice from "./Choice";
-import Header from "./Header";
-import ScoreBoard from "./ScoreBoard";
-import RulesCard from "./RulesCard";
-import ResultsDisplay from "./ResultsDisplay";
-class App extends React.Component {
-  render() {
+import * as React from "react";
+import "./styles/global.scss";
+import Choice from "./components/Choice";
+import Header from "./components/Header";
+import ScoreBoard from "./components/ScoreBoard";
+import RulesCard from "./components/RulesCard";
+import ResultsDisplay from "./components/ResultsDisplay";
+
+
+function App() {
+  
     return (
       <div>
         <Header>
@@ -25,7 +27,7 @@ class App extends React.Component {
         </div>
       </div>
     );
-  }
+  
 }
 
 export default App;

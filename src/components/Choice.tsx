@@ -1,12 +1,22 @@
 import React from "react";
-import "../styles/choice.css";
+import "../styles/choice.scss";
 import Iconrock from "../images/icon-rock.svg";
 import Iconpaper from "../images/icon-paper.svg";
 import Iconscissors from "../images/icon-scissors.svg";
 
-function Choice(props) {
+export interface Props {
+  choice: string;
+  size: string;
+  choiceIcon?: any;
+/*   enthusiasmLevel?: number;
+  onIncrement?: () => void;
+  onDecrement?: () => void; */
+}
+
+
+function Choice({choice, size, choiceIcon=Iconscissors} :Props) {
   const cStyle = {};
-  const myChoice = "scissors";
+  /* const myChoice = "scissors";
   var logo;
   switch (myChoice) {
     case "rock":
@@ -18,13 +28,13 @@ function Choice(props) {
     case "scissors":
       logo = Iconscissors;
       break;
-  }
+  } */
 
   return (
-    <div className={props.size}>
-      <div id={myChoice} className={`button-circle ${myChoice}-button`}>
+    <div className={size}>
+      <div id={choice} className={`button-circle ${choice}-button`}>
         <div className="button-inside">
-          <img src={logo} alt={myChoice} className="icon" />
+          <img src={choiceIcon} alt={choice} className="icon" />
         </div>
       </div>
     </div>
