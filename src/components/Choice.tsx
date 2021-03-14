@@ -1,42 +1,32 @@
-import React from "react";
-import "../styles/choice.scss";
-import Iconrock from "../images/icon-rock.svg";
-import Iconpaper from "../images/icon-paper.svg";
-import Iconscissors from "../images/icon-scissors.svg";
+import React, { useContext } from 'react';
+import { GameContext } from '../context/GameContext';
+import '../styles/choice.scss';
+import { ChoiceType } from '../types/Choice';
 
 export interface Props {
-  choice: string;
+  choice: ChoiceType;
   size: string;
-  choiceIcon?: any;
-/*   enthusiasmLevel?: number;
-  onIncrement?: () => void;
-  onDecrement?: () => void; */
 }
 
-
-function Choice({choice, size, choiceIcon=Iconscissors} :Props) {
+function Choice({ choice, size }: Props) {
   const cStyle = {};
-  /* const myChoice = "scissors";
-  var logo;
-  switch (myChoice) {
-    case "rock":
-      logo = Iconrock;
-      break;
-    case "paper":
-      logo = Iconpaper;
-      break;
-    case "scissors":
-      logo = Iconscissors;
-      break;
-  } */
-
+  //const choice = new ChoiceObject(choiceId);
+  const { score, updateScore, userChoice, updateUserChoice } = useContext(
+    GameContext
+  );
+  const updateChoice = () => {
+    updateUserChoice(userChoice, choice.id);
+  };
   return (
     <div className={size}>
-      <div id={choice} className={`button-circle ${choice}-button`}>
+      <button
+        className={`button-circle ${choice.name}-button`}
+        onClick={() => updateChoice()}
+      >
         <div className="button-inside">
-          <img src={choiceIcon} alt={choice} className="icon" />
+          <img src={choice.icon} alt={choice.name} className="icon" />
         </div>
-      </div>
+      </button>
     </div>
   );
 }
