@@ -7,7 +7,7 @@ export type GameContextType = {
   userChoice: ChoiceType;
   computerChoice: ChoiceType;
   updatePlaying: (playing: boolean) => void;
-  updateScore: (score: number) => void;
+  setScore: (score: number) => void;
   updateUserChoice: (userChoice: ChoiceType, choiceId: number) => void;
   updateComputerChoice: (computerChoice: ChoiceType, choiceId: number) => void;
 };
@@ -18,7 +18,7 @@ const initialState: GameContextType = {
   userChoice: { id: -1, name: '', icon: '' },
   computerChoice: { id: -1, name: '', icon: '' },
   updatePlaying: () => {},
-  updateScore: () => {},
+  setScore: () => {},
   updateUserChoice: () => {},
   updateComputerChoice: () => {},
 };
@@ -33,8 +33,10 @@ const GameProvider: React.FC = ({ children }) => {
     initialState.computerChoice
   );
 
-  const updateScore = (newScore: number) =>
-    setScore((score) => score + newScore);
+  /*   const updateScore = (newScore: number) => {
+    setScore(newScore);
+    console.log(score);
+  }; */
 
   const updateUserChoice = (userChoice: ChoiceType, choiceId: number) => {
     setUserChoice(() => {
@@ -64,7 +66,7 @@ const GameProvider: React.FC = ({ children }) => {
         playing,
         updatePlaying,
         score,
-        updateScore,
+        setScore,
         userChoice,
         updateUserChoice,
         computerChoice,

@@ -3,18 +3,22 @@ import { GameContext } from '../context/GameContext';
 import Choice from './Choice';
 import ChoicesDisplay from './ChoicesDisplay';
 import ResultsDisplay from './ResultsDisplay';
+import { getWinner } from '../types/Choice';
 const Game = (props: any) => {
   const initialSeconds = 3;
   const [roundOver, setRoundOver] = useState(false);
   const [seconds, setSeconds] = useState(initialSeconds);
 
   const {
-    updateScore,
+    playing,
+    updatePlaying,
+    setScore,
     userChoice,
     updateUserChoice,
     computerChoice,
     updateComputerChoice,
   } = useContext(GameContext);
+
   useEffect(() => {
     let timer = setInterval(() => {
       if (seconds !== 0) {
@@ -32,15 +36,22 @@ const Game = (props: any) => {
       let randomId = getRandomId();
       updateComputerChoice(computerChoice, randomId);
     }
-
-    if (userChoice.id !== -1 && computerChoice.id !== -1) {
+    if (seconds === 0 && userChoice.id !== -1 && computerChoice.id !== -1) {
       setRoundOver(true);
+      //updatePlaying(playing);
     }
-
     return () => {
       clearInterval(timer);
     };
   });
+
+  const winner = getWinner(userChoice, computerChoice);
+  //update score
+  /*  if (winner === userChoice) {
+    updateScore(1);
+  } else if (winner === computerChoice) {
+    updateScore(-1);
+  } */
 
   return (
     <div>
@@ -52,7 +63,7 @@ const Game = (props: any) => {
           <ChoicesDisplay></ChoicesDisplay>
         </div>
       ) : (
-        <ResultsDisplay></ResultsDisplay>
+        <ResultsDisplay winner={winner}></ResultsDisplay>
       )}
     </div>
   );

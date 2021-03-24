@@ -11,7 +11,7 @@ export interface Props {
 function Choice({ choice, size }: Props) {
   const cStyle = {};
   //const choice = new ChoiceObject(choiceId);
-  const { score, updateScore, userChoice, updateUserChoice } = useContext(
+  const { score, setScore, userChoice, updateUserChoice } = useContext(
     GameContext
   );
   const updateChoice = () => {
