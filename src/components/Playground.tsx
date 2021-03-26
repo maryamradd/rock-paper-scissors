@@ -14,7 +14,7 @@ const Playground = () => {
       {!playing ? (
         <div className="containter">
           <div className="column again">
-            <h1>Play rock paper sicciorss against the computer</h1>
+            <h2>Play Rock Paper Scissors against the computer</h2>
             <button className="again-button" onClick={() => startGame()}>
               PLAY
             </button>
