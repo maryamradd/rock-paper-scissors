@@ -8,7 +8,7 @@ const Game = (props: any) => {
   const initialSeconds = 3;
   const [roundOver, setRoundOver] = useState(false);
   const [seconds, setSeconds] = useState(initialSeconds);
-
+  // rng seems to be rigged
   const {
     playing,
     updatePlaying,
