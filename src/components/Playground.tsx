@@ -1,6 +1,5 @@
-import React, { useContext, useState } from 'react';
-import Choice from './Choice';
-import '../styles/results-display.scss';
+import React, { useContext } from 'react';
+import '../styles/components/results-display.scss';
 import Game from './Game';
 import { GameContext } from '../context/GameContext';
 

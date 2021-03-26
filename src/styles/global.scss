@@ -1,9 +1,4 @@
-:root {
-  --main-bg: linear-gradient(-90deg, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
-  --red-gradiant: linear-gradient(hsl(349, 70%, 56%), hsl(349, 71%, 52%));
-  --yellow-gradiant: linear-gradient(hsl(40, 84%, 53%), hsl(39, 89%, 49%));
-  --blue-gradiant: linear-gradient(hsl(230, 89%, 65%), hsl(230, 89%, 62%));
-}
+@import 'utilities/variables';
 
 * {
   margin: 0;
@@ -26,7 +21,7 @@ body {
 body,
 input,
 button {
-  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: $font-barlow;
 }
 a {
   text-decoration: none;
@@ -39,8 +34,8 @@ button {
 }
 
 body {
-  font-family: "Barlow Semi Condensed", sans-serif;
-  background: var(--main-bg);
+  font-family: $font-barlow;
+  background: $main-bg;
   color: #fff;
 }
 
@@ -49,7 +44,7 @@ body {
   border: 2px solid hsl(232, 15%, 58%);
   color: #fff;
   border-radius: 10px;
-  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: $font-barlow;
   font-size: 12pt;
   letter-spacing: 0.15em;
   padding: 10px 40px;

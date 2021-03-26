@@ -1,0 +1,22 @@
+@import '../utilities/variables';
+
+.score-container {
+  border-radius: 10px;
+  background-color: #fff;
+  float: right;
+  text-align: center;
+
+  h4 {
+    color: $blue-darker;
+    font-size: 12pt;
+    letter-spacing: 0.1em;
+    font-weight: lighter;
+    margin: 15px 45px 0px 45px;
+  }
+
+  h1 {
+    color: $light-grey;
+    font-size: 42pt;
+    margin: 0px 0px 5px 0px;
+  }
+}

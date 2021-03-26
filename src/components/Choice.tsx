@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { GameContext } from '../context/GameContext';
-import '../styles/choice.scss';
+import '../styles/components/choice.scss';
 import { ChoiceType } from '../types/Choice';
 
 export interface Props {

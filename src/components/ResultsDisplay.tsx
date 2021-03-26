@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import Choice from './Choice';
-import '../styles/results-display.scss';
+import '../styles/components/results-display.scss';
 import { GameContext } from '../context/GameContext';
 
 export default function ResultsDisplay({ winner }: any) {

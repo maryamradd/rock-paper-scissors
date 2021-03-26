@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import '../styles/score-board.scss';
+import '../styles/components/score-board.scss';
 import { GameContext } from '../context/GameContext';
 
 export default function ScoreBoard() {

@@ -7,3 +7,10 @@
 .bottom-choice {
   align-self: flex-start;
 }
+
+.triangle {
+  position: absolute;
+  top: 350px;
+  left: 1000px;
+  z-index: -1;
+}

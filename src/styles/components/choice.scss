@@ -1,3 +1,5 @@
+@import '../utilities/variables';
+
 .button-circle {
   width: 100%;
   height: 100%;
@@ -18,20 +20,20 @@
 
 .paper-button,
 .paper-button:active {
-  background: var(--blue-gradiant);
-  border-color: hsl(229, 65%, 46%);
+  background: $blue-gradiant;
+  border-color: $blue-darker;
 }
 
 .rock-button,
 .rock-button:active {
-  background: var(--red-gradiant);
-  border-color: hsl(346, 77%, 35%);
+  background: $red-gradiant;
+  border-color: $red-darker;
 }
 
 .scissors-button,
 .scissors-button:active {
-  background: var(--yellow-gradiant);
-  border-color: hsl(28, 75%, 45%);
+  background: $yellow-gradiant;
+  border-color: $yellow-darker;
 }
 
 .button-inside {

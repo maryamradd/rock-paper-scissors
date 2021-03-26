@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { GameContext } from '../context/GameContext';
-import Choice from './Choice';
 import ChoicesDisplay from './ChoicesDisplay';
 import ResultsDisplay from './ResultsDisplay';
 import { getWinner } from '../types/Choice';
@@ -10,9 +9,6 @@ const Game = (props: any) => {
   const [seconds, setSeconds] = useState(initialSeconds);
   // rng seems to be rigged
   const {
-    playing,
-    updatePlaying,
-    setScore,
     userChoice,
     updateUserChoice,
     computerChoice,
@@ -46,12 +42,6 @@ const Game = (props: any) => {
   });
 
   const winner = getWinner(userChoice, computerChoice);
-  //update score
-  /*  if (winner === userChoice) {
-    updateScore(1);
-  } else if (winner === computerChoice) {
-    updateScore(-1);
-  } */
 
   return (
     <div>

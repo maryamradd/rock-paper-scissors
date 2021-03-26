@@ -1,6 +1,6 @@
 import React from 'react';
 import Choice from './Choice';
-import '../styles/choices-display.scss';
+import '../styles/components/choices-display.scss';
 import { Rock, Paper, Scissors } from '../types/Choice';
 
 const ChoicesDisplay = () => {
@@ -8,7 +8,7 @@ const ChoicesDisplay = () => {
     <>
       <div className="container">
         <Choice choice={Paper} size="big-size"></Choice>
-        <Choice choice={Scissors} size="big-size"></Choice>{' '}
+        <Choice choice={Scissors} size="big-size"></Choice>
       </div>
       <div className="bottom-choice">
         <Choice choice={Rock} size="big-size"></Choice>
@@ -18,7 +18,7 @@ const ChoicesDisplay = () => {
           <path
             fill="none"
             stroke="#000"
-            stroke-width="15"
+            strokeWidth="15"
             d="M291.5 7.5H4.574c3.119 0 52.416 84.667 147.892 254L291.5 7.5z"
             opacity=".2"
           />
