@@ -6,7 +6,7 @@ import { Rock, Paper, Scissors } from '../types/Choice';
 const ChoicesDisplay = () => {
   return (
     <>
-      <div className="container">
+      <div className="choices-container">
         <Choice choice={Paper} size="big-size"></Choice>
         <Choice choice={Scissors} size="big-size"></Choice>
       </div>
